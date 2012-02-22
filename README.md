@@ -1,10 +1,10 @@
 # linux.vim
 
-Vim plugin that prepare your vim for Linux Kernel hacking.
+Plugin that prepares your Vim for Linux Kernel hacking. (Still in early development)
 
 
 #Installation
-Use `Pathogen`, `Vundle` or just put the files into your `~/.vim` directory.
+Use `Pathogen`, `Vundle` or just put the plugin files into your `~/.vim` directory.
 
 
 #Usage
