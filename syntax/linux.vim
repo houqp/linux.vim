@@ -60,16 +60,16 @@ syn keyword kernelFileFunc	read llseek owner write ioctl open release fasync pol
 
 syn match ErrorLeadSpace /^ \+/         " highlight any leading spaces
 syn match ErrorTailSpace / \+$/         " highlight any trailing spaces
-syn match Error80            /\%>80v.\+/    " highlight anything past 80 in red
+syn match Error80       /\%>80v.\+/    " highlight anything past 80 in red
 
 if has("gui_running")
 	hi Error80        gui=NONE   guifg=#ffffff   guibg=#6e2e2e
 	hi ErrorLeadSpace gui=NONE   guifg=#ffffff   guibg=#6e2e2e
 	hi ErrorTailSpace gui=NONE   guifg=#ffffff   guibg=#6e2e2e
 else
-	exec "hi Error80        cterm=NONE   ctermfg=" . <SID>X(79) . " ctermbg=" . <SID>X(32)
-	exec "hi ErrorLeadSpace cterm=NONE   ctermfg=" . <SID>X(79) . " ctermbg=" . <SID>X(33)
-	exec "hi ErrorTailSpace cterm=NONE   ctermfg=" . <SID>X(79) . " ctermbg=" . <SID>X(33)
+	hi Error80        cterm=NONE   ctermfg=White ctermbg=DarkRed
+	hi ErrorLeadSpace cterm=NONE   ctermfg=White ctermbg=DarkRed
+	hi ErrorTailSpace cterm=NONE   ctermfg=White ctermbg=DarkRed
 endif
 
 
