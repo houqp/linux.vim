@@ -3,15 +3,15 @@
 Plugin that prepares your Vim for Linux Kernel hacking. (Still in early development)
 
 
-#Installation
+##Installation
 Use `Pathogen`, `Vundle` or just put the plugin files into your `~/.vim` directory.
 
 
-#Usage
+##Usage
 Use `:ToggleLinuxKernelCoding` command to toggle the kernel hacking settings.
 
 
-#Thanks
+##Thanks
 Bart for his great [blog post][blog_ref].
 
 
