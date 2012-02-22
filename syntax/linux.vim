@@ -1,10 +1,12 @@
 " Vim syntax file
 " Version:     0.1
 " Maintainer:	 houqp <dave2008713@gmail.com> 
-" Last Change: 2008 Sep 11, 12:53 Thu
+" Last Change: 2012 Feb 22
 " Remark:	
-" from http://www.jukie.net/bart/blog/vim-and-linux-coding-style
-" based on https://github.com/v0n/vim-addon-linux-coding-style
+"
+" reference: 
+" http://www.jukie.net/bart/blog/vim-and-linux-coding-style
+" https://github.com/v0n/vim-addon-linux-coding-style
 "
 
 "@TODO checkout c-support/wordlist  18.02 2012
@@ -58,18 +60,21 @@ syn keyword kernelFileFunc	read llseek owner write ioctl open release fasync pol
 
 
 
-syn match ErrorLeadSpace /^ \+/         " highlight any leading spaces
-syn match ErrorTailSpace / \+$/         " highlight any trailing spaces
-syn match Error80       /\%>80v.\+/    " highlight anything past 80 in red
+syn match ErrorLeadSpace	/^ \+/			" highlight any leading spaces
+syn match ErrorTailSpace	/ \+$/			" highlight any trailing spaces
+syn match Error80			/\%>80v.\+/		" highlight anything past 80 in red
+syn match ErrorSpaceInside	/( \+\| \+)/	" highlight spaces inside parenthesized expressions
 
 if has("gui_running")
 	hi Error80        gui=NONE   guifg=#ffffff   guibg=#6e2e2e
 	hi ErrorLeadSpace gui=NONE   guifg=#ffffff   guibg=#6e2e2e
 	hi ErrorTailSpace gui=NONE   guifg=#ffffff   guibg=#6e2e2e
+	hi ErrorSpaceInside gui=NONE guifg=#ffffff   guibg=#6e2e2e
 else
 	hi Error80        cterm=NONE   ctermfg=White ctermbg=DarkRed
 	hi ErrorLeadSpace cterm=NONE   ctermfg=White ctermbg=DarkRed
 	hi ErrorTailSpace cterm=NONE   ctermfg=White ctermbg=DarkRed
+	hi ErrorSpaceInside cterm=NONE   ctermfg=White ctermbg=DarkRed
 endif
 
 
