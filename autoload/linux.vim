@@ -41,6 +41,7 @@ function! linux#toggleKernelCoding_c()
 		let &cinoptions = b:cinoptions_bak
 
 		let &tags = b:tags_bak
+		let b:inLinuxKernel = 0
 	else	" not in linux kernel coding mode, trun it on
 		let b:inLinuxKernel = 1
 
